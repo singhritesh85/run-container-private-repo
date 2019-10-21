@@ -1,0 +1,34 @@
+---
+- name: create_image_and_run_container.yml
+  hosts: all
+  tasks: 
+  - name: create directory
+    file:
+      path: /root/run-container/
+      state: directory
+
+  - name: copy key file
+    copy:
+      src: /root/.ssh/id_rsa
+      dest: /root/key_file
+      mode: 0600
+
+  - name: pull the latest code from git
+    git:
+      repo: git@github.com:singhritesh85/run-docker-container.git
+      dest: /root/run-container
+      version: master
+      update: yes
+      clone: yes
+      key_file: /root/key_file
+
+  - name: build docker image
+    shell: docker build -t myimage:1.04 .
+    args:
+      chdir: /root/run-container/
+
+  - name: run container
+    shell: docker run -d --name=container-1 -p 8081:80 myimage:1.04
+
+  - name: list the running conatiners
+    shell: docker ps

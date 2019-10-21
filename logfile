@@ -1,0 +1,290 @@
+2019-10-21 12:48:52,299 p=13698 u=root |  18.217.198.162 | UNREACHABLE! => {
+    "changed": false, 
+    "msg": "Failed to connect to the host via ssh: Warning: Permanently added '18.217.198.162' (ECDSA) to the list of known hosts.\r\nroot@18.217.198.162: Permission denied (publickey).", 
+    "unreachable": true
+}
+2019-10-21 12:50:12,895 p=13782 u=root |  [DEPRECATION WARNING]: Distribution Ubuntu 18.04 on host 18.217.198.162 should use /usr/bin/python3, but is using /usr/bin/python for backward compatibility with prior
+ Ansible releases. A future Ansible release will default to using the discovered platform python for this host. See 
+https://docs.ansible.com/ansible/2.8/reference_appendices/interpreter_discovery.html for more information. This feature will be removed in version 2.12. Deprecation 
+warnings can be disabled by setting deprecation_warnings=False in ansible.cfg.
+2019-10-21 12:50:12,896 p=13782 u=root |  18.217.198.162 | SUCCESS => {
+    "ansible_facts": {
+        "discovered_interpreter_python": "/usr/bin/python"
+    }, 
+    "changed": false, 
+    "ping": "pong"
+}
+2019-10-21 12:53:39,788 p=20250 u=root |  PLAY [create_image_and_run_container.yml] ******************************************************************************************************************************
+2019-10-21 12:53:39,797 p=20250 u=root |  TASK [Gathering Facts] *************************************************************************************************************************************************
+2019-10-21 12:53:41,977 p=20250 u=root |  ok: [18.217.198.162]
+2019-10-21 12:53:41,994 p=20250 u=root |  TASK [create directory] ************************************************************************************************************************************************
+2019-10-21 12:53:42,349 p=20250 u=root |  changed: [18.217.198.162]
+2019-10-21 12:53:42,367 p=20250 u=root |  TASK [pull the latest code from git] ***********************************************************************************************************************************
+2019-10-21 12:53:42,880 p=20250 u=root |  fatal: [18.217.198.162]: FAILED! => {"changed": false, "cmd": "/usr/bin/git clone --origin origin '' /root/run-container", "msg": "Cloning into '/root/run-container'...\nWarning: Identity file /root/key_file not accessible: No such file or directory.\nHost key verification failed.\r\nfatal: Could not read from remote repository.\n\nPlease make sure you have the correct access rights\nand the repository exists.", "rc": 128, "stderr": "Cloning into '/root/run-container'...\nWarning: Identity file /root/key_file not accessible: No such file or directory.\nHost key verification failed.\r\nfatal: Could not read from remote repository.\n\nPlease make sure you have the correct access rights\nand the repository exists.\n", "stderr_lines": ["Cloning into '/root/run-container'...", "Warning: Identity file /root/key_file not accessible: No such file or directory.", "Host key verification failed.", "fatal: Could not read from remote repository.", "", "Please make sure you have the correct access rights", "and the repository exists."], "stdout": "", "stdout_lines": []}
+2019-10-21 12:53:42,884 p=20250 u=root |  PLAY RECAP *************************************************************************************************************************************************************
+2019-10-21 12:53:42,884 p=20250 u=root |  18.217.198.162             : ok=2    changed=1    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2019-10-21 12:54:58,299 p=20479 u=root |  PLAY [create_image_and_run_container.yml] ******************************************************************************************************************************
+2019-10-21 12:54:58,307 p=20479 u=root |  TASK [Gathering Facts] *************************************************************************************************************************************************
+2019-10-21 12:55:00,013 p=20479 u=root |  ok: [18.217.198.162]
+2019-10-21 12:55:00,030 p=20479 u=root |  TASK [create directory] ************************************************************************************************************************************************
+2019-10-21 12:55:00,393 p=20479 u=root |  ok: [18.217.198.162]
+2019-10-21 12:55:00,412 p=20479 u=root |  TASK [pull the latest code from git] ***********************************************************************************************************************************
+2019-10-21 12:55:00,893 p=20479 u=root |  fatal: [18.217.198.162]: FAILED! => {"changed": false, "cmd": "/usr/bin/git clone --origin origin '' /root/run-container", "msg": "Cloning into '/root/run-container'...\nWarning: Identity file /root/key_file not accessible: No such file or directory.\nHost key verification failed.\r\nfatal: Could not read from remote repository.\n\nPlease make sure you have the correct access rights\nand the repository exists.", "rc": 128, "stderr": "Cloning into '/root/run-container'...\nWarning: Identity file /root/key_file not accessible: No such file or directory.\nHost key verification failed.\r\nfatal: Could not read from remote repository.\n\nPlease make sure you have the correct access rights\nand the repository exists.\n", "stderr_lines": ["Cloning into '/root/run-container'...", "Warning: Identity file /root/key_file not accessible: No such file or directory.", "Host key verification failed.", "fatal: Could not read from remote repository.", "", "Please make sure you have the correct access rights", "and the repository exists."], "stdout": "", "stdout_lines": []}
+2019-10-21 12:55:00,896 p=20479 u=root |  PLAY RECAP *************************************************************************************************************************************************************
+2019-10-21 12:55:00,896 p=20479 u=root |  18.217.198.162             : ok=2    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2019-10-21 12:57:58,756 p=20707 u=root |  PLAY [create_image_and_run_container.yml] ******************************************************************************************************************************
+2019-10-21 12:57:58,764 p=20707 u=root |  TASK [Gathering Facts] *************************************************************************************************************************************************
+2019-10-21 12:58:00,456 p=20707 u=root |  ok: [18.217.198.162]
+2019-10-21 12:58:00,473 p=20707 u=root |  TASK [create directory] ************************************************************************************************************************************************
+2019-10-21 12:58:00,829 p=20707 u=root |  ok: [18.217.198.162]
+2019-10-21 12:58:00,849 p=20707 u=root |  TASK [copy key file] ***************************************************************************************************************************************************
+2019-10-21 12:58:01,479 p=20707 u=root |  changed: [18.217.198.162]
+2019-10-21 12:58:01,498 p=20707 u=root |  TASK [pull the latest code from git] ***********************************************************************************************************************************
+2019-10-21 12:58:01,983 p=20707 u=root |  fatal: [18.217.198.162]: FAILED! => {"changed": false, "cmd": "/usr/bin/git clone --origin origin '' /root/run-container", "msg": "Cloning into '/root/run-container'...\nHost key verification failed.\r\nfatal: Could not read from remote repository.\n\nPlease make sure you have the correct access rights\nand the repository exists.", "rc": 128, "stderr": "Cloning into '/root/run-container'...\nHost key verification failed.\r\nfatal: Could not read from remote repository.\n\nPlease make sure you have the correct access rights\nand the repository exists.\n", "stderr_lines": ["Cloning into '/root/run-container'...", "Host key verification failed.", "fatal: Could not read from remote repository.", "", "Please make sure you have the correct access rights", "and the repository exists."], "stdout": "", "stdout_lines": []}
+2019-10-21 12:58:01,986 p=20707 u=root |  PLAY RECAP *************************************************************************************************************************************************************
+2019-10-21 12:58:01,987 p=20707 u=root |  18.217.198.162             : ok=3    changed=1    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2019-10-21 13:01:58,548 p=20981 u=root |  PLAY [create_image_and_run_container.yml] ******************************************************************************************************************************
+2019-10-21 13:01:58,557 p=20981 u=root |  TASK [Gathering Facts] *************************************************************************************************************************************************
+2019-10-21 13:02:00,238 p=20981 u=root |  ok: [18.217.198.162]
+2019-10-21 13:02:00,256 p=20981 u=root |  TASK [create directory] ************************************************************************************************************************************************
+2019-10-21 13:02:00,611 p=20981 u=root |  ok: [18.217.198.162]
+2019-10-21 13:02:00,631 p=20981 u=root |  TASK [copy key file] ***************************************************************************************************************************************************
+2019-10-21 13:02:01,167 p=20981 u=root |  ok: [18.217.198.162]
+2019-10-21 13:02:01,187 p=20981 u=root |  TASK [pull the latest code from git] ***********************************************************************************************************************************
+2019-10-21 13:02:01,670 p=20981 u=root |  fatal: [18.217.198.162]: FAILED! => {"changed": false, "cmd": "/usr/bin/git clone --origin origin '' /root/run-container", "msg": "Cloning into '/root/run-container'...\nHost key verification failed.\r\nfatal: Could not read from remote repository.\n\nPlease make sure you have the correct access rights\nand the repository exists.", "rc": 128, "stderr": "Cloning into '/root/run-container'...\nHost key verification failed.\r\nfatal: Could not read from remote repository.\n\nPlease make sure you have the correct access rights\nand the repository exists.\n", "stderr_lines": ["Cloning into '/root/run-container'...", "Host key verification failed.", "fatal: Could not read from remote repository.", "", "Please make sure you have the correct access rights", "and the repository exists."], "stdout": "", "stdout_lines": []}
+2019-10-21 13:02:01,673 p=20981 u=root |  PLAY RECAP *************************************************************************************************************************************************************
+2019-10-21 13:02:01,673 p=20981 u=root |  18.217.198.162             : ok=3    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2019-10-21 13:02:41,289 p=21238 u=root |  PLAY [create_image_and_run_container.yml] ******************************************************************************************************************************
+2019-10-21 13:02:41,297 p=21238 u=root |  TASK [Gathering Facts] *************************************************************************************************************************************************
+2019-10-21 13:02:42,283 p=21238 u=root |  ok: [18.217.198.162]
+2019-10-21 13:02:42,300 p=21238 u=root |  TASK [create directory] ************************************************************************************************************************************************
+2019-10-21 13:02:42,652 p=21238 u=root |  ok: [18.217.198.162]
+2019-10-21 13:02:42,672 p=21238 u=root |  TASK [copy key file] ***************************************************************************************************************************************************
+2019-10-21 13:02:43,157 p=21238 u=root |  ok: [18.217.198.162]
+2019-10-21 13:02:43,175 p=21238 u=root |  TASK [pull the latest code from git] ***********************************************************************************************************************************
+2019-10-21 13:02:43,654 p=21238 u=root |  fatal: [18.217.198.162]: FAILED! => {"changed": false, "cmd": "/usr/bin/git clone --origin origin '' /root/run-container", "msg": "Cloning into '/root/run-container'...\nHost key verification failed.\r\nfatal: Could not read from remote repository.\n\nPlease make sure you have the correct access rights\nand the repository exists.", "rc": 128, "stderr": "Cloning into '/root/run-container'...\nHost key verification failed.\r\nfatal: Could not read from remote repository.\n\nPlease make sure you have the correct access rights\nand the repository exists.\n", "stderr_lines": ["Cloning into '/root/run-container'...", "Host key verification failed.", "fatal: Could not read from remote repository.", "", "Please make sure you have the correct access rights", "and the repository exists."], "stdout": "", "stdout_lines": []}
+2019-10-21 13:02:43,657 p=21238 u=root |  PLAY RECAP *************************************************************************************************************************************************************
+2019-10-21 13:02:43,657 p=21238 u=root |  18.217.198.162             : ok=3    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2019-10-21 13:07:56,629 p=21430 u=root |  PLAY [create_image_and_run_container.yml] ******************************************************************************************************************************
+2019-10-21 13:07:56,638 p=21430 u=root |  TASK [Gathering Facts] *************************************************************************************************************************************************
+2019-10-21 13:07:58,324 p=21430 u=root |  ok: [18.217.198.162]
+2019-10-21 13:07:58,341 p=21430 u=root |  TASK [create directory] ************************************************************************************************************************************************
+2019-10-21 13:07:58,690 p=21430 u=root |  ok: [18.217.198.162]
+2019-10-21 13:07:58,709 p=21430 u=root |  TASK [copy key file] ***************************************************************************************************************************************************
+2019-10-21 13:07:59,184 p=21430 u=root |  ok: [18.217.198.162]
+2019-10-21 13:07:59,203 p=21430 u=root |  TASK [pull the latest code from git] ***********************************************************************************************************************************
+2019-10-21 13:07:59,688 p=21430 u=root |  fatal: [18.217.198.162]: FAILED! => {"changed": false, "cmd": "/usr/bin/git clone --origin origin '' /root/run-container", "msg": "Cloning into '/root/run-container'...\nHost key verification failed.\r\nfatal: Could not read from remote repository.\n\nPlease make sure you have the correct access rights\nand the repository exists.", "rc": 128, "stderr": "Cloning into '/root/run-container'...\nHost key verification failed.\r\nfatal: Could not read from remote repository.\n\nPlease make sure you have the correct access rights\nand the repository exists.\n", "stderr_lines": ["Cloning into '/root/run-container'...", "Host key verification failed.", "fatal: Could not read from remote repository.", "", "Please make sure you have the correct access rights", "and the repository exists."], "stdout": "", "stdout_lines": []}
+2019-10-21 13:07:59,691 p=21430 u=root |  PLAY RECAP *************************************************************************************************************************************************************
+2019-10-21 13:07:59,691 p=21430 u=root |  18.217.198.162             : ok=3    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2019-10-21 13:10:13,189 p=21722 u=root |  PLAY [create_image_and_run_container.yml] ******************************************************************************************************************************
+2019-10-21 13:10:13,198 p=21722 u=root |  TASK [Gathering Facts] *************************************************************************************************************************************************
+2019-10-21 13:10:14,920 p=21722 u=root |  ok: [18.217.198.162]
+2019-10-21 13:10:14,938 p=21722 u=root |  TASK [create directory] ************************************************************************************************************************************************
+2019-10-21 13:10:15,293 p=21722 u=root |  ok: [18.217.198.162]
+2019-10-21 13:10:15,313 p=21722 u=root |  TASK [copy key file] ***************************************************************************************************************************************************
+2019-10-21 13:10:15,806 p=21722 u=root |  ok: [18.217.198.162]
+2019-10-21 13:10:15,826 p=21722 u=root |  TASK [pull the latest code from git] ***********************************************************************************************************************************
+2019-10-21 13:10:16,315 p=21722 u=root |  fatal: [18.217.198.162]: FAILED! => {"changed": false, "cmd": "/usr/bin/git clone --origin origin '' /root/run-container", "msg": "Cloning into '/root/run-container'...\nHost key verification failed.\r\nfatal: Could not read from remote repository.\n\nPlease make sure you have the correct access rights\nand the repository exists.", "rc": 128, "stderr": "Cloning into '/root/run-container'...\nHost key verification failed.\r\nfatal: Could not read from remote repository.\n\nPlease make sure you have the correct access rights\nand the repository exists.\n", "stderr_lines": ["Cloning into '/root/run-container'...", "Host key verification failed.", "fatal: Could not read from remote repository.", "", "Please make sure you have the correct access rights", "and the repository exists."], "stdout": "", "stdout_lines": []}
+2019-10-21 13:10:16,319 p=21722 u=root |  PLAY RECAP *************************************************************************************************************************************************************
+2019-10-21 13:10:16,319 p=21722 u=root |  18.217.198.162             : ok=3    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2019-10-21 13:11:43,522 p=21982 u=root |  PLAY [create_image_and_run_container.yml] ******************************************************************************************************************************
+2019-10-21 13:11:43,531 p=21982 u=root |  TASK [Gathering Facts] *************************************************************************************************************************************************
+2019-10-21 13:11:45,254 p=21982 u=root |  ok: [18.217.198.162]
+2019-10-21 13:11:45,272 p=21982 u=root |  TASK [create directory] ************************************************************************************************************************************************
+2019-10-21 13:11:45,629 p=21982 u=root |  ok: [18.217.198.162]
+2019-10-21 13:11:45,649 p=21982 u=root |  TASK [copy key file] ***************************************************************************************************************************************************
+2019-10-21 13:11:46,141 p=21982 u=root |  ok: [18.217.198.162]
+2019-10-21 13:11:46,160 p=21982 u=root |  TASK [pull the latest code from git] ***********************************************************************************************************************************
+2019-10-21 13:11:46,640 p=21982 u=root |  fatal: [18.217.198.162]: FAILED! => {"changed": false, "cmd": "/usr/bin/git clone --origin origin '' /root/run-container", "msg": "Cloning into '/root/run-container'...\nHost key verification failed.\r\nfatal: Could not read from remote repository.\n\nPlease make sure you have the correct access rights\nand the repository exists.", "rc": 128, "stderr": "Cloning into '/root/run-container'...\nHost key verification failed.\r\nfatal: Could not read from remote repository.\n\nPlease make sure you have the correct access rights\nand the repository exists.\n", "stderr_lines": ["Cloning into '/root/run-container'...", "Host key verification failed.", "fatal: Could not read from remote repository.", "", "Please make sure you have the correct access rights", "and the repository exists."], "stdout": "", "stdout_lines": []}
+2019-10-21 13:11:46,644 p=21982 u=root |  PLAY RECAP *************************************************************************************************************************************************************
+2019-10-21 13:11:46,644 p=21982 u=root |  18.217.198.162             : ok=3    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2019-10-21 13:16:30,660 p=22271 u=root |  PLAY [create_image_and_run_container.yml] ******************************************************************************************************************************
+2019-10-21 13:16:30,669 p=22271 u=root |  TASK [Gathering Facts] *************************************************************************************************************************************************
+2019-10-21 13:16:32,472 p=22271 u=root |  ok: [13.58.107.152]
+2019-10-21 13:16:32,489 p=22271 u=root |  TASK [create directory] ************************************************************************************************************************************************
+2019-10-21 13:16:32,909 p=22271 u=root |  changed: [13.58.107.152]
+2019-10-21 13:16:32,929 p=22271 u=root |  TASK [copy key file] ***************************************************************************************************************************************************
+2019-10-21 13:16:33,692 p=22271 u=root |  changed: [13.58.107.152]
+2019-10-21 13:16:33,711 p=22271 u=root |  TASK [pull the latest code from git] ***********************************************************************************************************************************
+2019-10-21 13:16:34,307 p=22271 u=root |  fatal: [13.58.107.152]: FAILED! => {"changed": false, "cmd": "/usr/bin/git clone --origin origin '' /root/run-container", "msg": "Cloning into '/root/run-container'...\nHost key verification failed.\r\nfatal: Could not read from remote repository.\n\nPlease make sure you have the correct access rights\nand the repository exists.", "rc": 128, "stderr": "Cloning into '/root/run-container'...\nHost key verification failed.\r\nfatal: Could not read from remote repository.\n\nPlease make sure you have the correct access rights\nand the repository exists.\n", "stderr_lines": ["Cloning into '/root/run-container'...", "Host key verification failed.", "fatal: Could not read from remote repository.", "", "Please make sure you have the correct access rights", "and the repository exists."], "stdout": "", "stdout_lines": []}
+2019-10-21 13:16:34,310 p=22271 u=root |  PLAY RECAP *************************************************************************************************************************************************************
+2019-10-21 13:16:34,311 p=22271 u=root |  13.58.107.152              : ok=3    changed=2    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2019-10-21 13:18:02,289 p=22331 u=root |  PLAY [create_image_and_run_container.yml] ******************************************************************************************************************************
+2019-10-21 13:18:02,298 p=22331 u=root |  TASK [Gathering Facts] *************************************************************************************************************************************************
+2019-10-21 13:18:04,052 p=22331 u=root |  ok: [13.58.107.152]
+2019-10-21 13:18:04,070 p=22331 u=root |  TASK [create directory] ************************************************************************************************************************************************
+2019-10-21 13:18:04,500 p=22331 u=root |  ok: [13.58.107.152]
+2019-10-21 13:18:04,520 p=22331 u=root |  TASK [copy key file] ***************************************************************************************************************************************************
+2019-10-21 13:18:05,175 p=22331 u=root |  changed: [13.58.107.152]
+2019-10-21 13:18:05,194 p=22331 u=root |  TASK [pull the latest code from git] ***********************************************************************************************************************************
+2019-10-21 13:18:05,749 p=22331 u=root |  fatal: [13.58.107.152]: FAILED! => {"changed": false, "cmd": "/usr/bin/git clone --origin origin '' /root/run-container", "msg": "Cloning into '/root/run-container'...\nHost key verification failed.\r\nfatal: Could not read from remote repository.\n\nPlease make sure you have the correct access rights\nand the repository exists.", "rc": 128, "stderr": "Cloning into '/root/run-container'...\nHost key verification failed.\r\nfatal: Could not read from remote repository.\n\nPlease make sure you have the correct access rights\nand the repository exists.\n", "stderr_lines": ["Cloning into '/root/run-container'...", "Host key verification failed.", "fatal: Could not read from remote repository.", "", "Please make sure you have the correct access rights", "and the repository exists."], "stdout": "", "stdout_lines": []}
+2019-10-21 13:18:05,753 p=22331 u=root |  PLAY RECAP *************************************************************************************************************************************************************
+2019-10-21 13:18:05,753 p=22331 u=root |  13.58.107.152              : ok=3    changed=1    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2019-10-21 13:24:44,413 p=22395 u=root |  PLAY [create_image_and_run_container.yml] ******************************************************************************************************************************
+2019-10-21 13:24:44,421 p=22395 u=root |  TASK [Gathering Facts] *************************************************************************************************************************************************
+2019-10-21 13:24:46,185 p=22395 u=root |  ok: [13.58.107.152]
+2019-10-21 13:24:46,203 p=22395 u=root |  TASK [create directory] ************************************************************************************************************************************************
+2019-10-21 13:24:46,624 p=22395 u=root |  ok: [13.58.107.152]
+2019-10-21 13:24:46,644 p=22395 u=root |  TASK [copy key file] ***************************************************************************************************************************************************
+2019-10-21 13:24:47,261 p=22395 u=root |  ok: [13.58.107.152]
+2019-10-21 13:24:47,280 p=22395 u=root |  TASK [pull the latest code from git] ***********************************************************************************************************************************
+2019-10-21 13:24:47,833 p=22395 u=root |  fatal: [13.58.107.152]: FAILED! => {"changed": false, "cmd": "/usr/bin/git clone --origin origin '' /root/run-container", "msg": "Cloning into '/root/run-container'...\nHost key verification failed.\r\nfatal: Could not read from remote repository.\n\nPlease make sure you have the correct access rights\nand the repository exists.", "rc": 128, "stderr": "Cloning into '/root/run-container'...\nHost key verification failed.\r\nfatal: Could not read from remote repository.\n\nPlease make sure you have the correct access rights\nand the repository exists.\n", "stderr_lines": ["Cloning into '/root/run-container'...", "Host key verification failed.", "fatal: Could not read from remote repository.", "", "Please make sure you have the correct access rights", "and the repository exists."], "stdout": "", "stdout_lines": []}
+2019-10-21 13:24:47,836 p=22395 u=root |  PLAY RECAP *************************************************************************************************************************************************************
+2019-10-21 13:24:47,836 p=22395 u=root |  13.58.107.152              : ok=3    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2019-10-21 13:25:48,187 p=22461 u=root |  PLAY [create_image_and_run_container.yml] ******************************************************************************************************************************
+2019-10-21 13:25:48,196 p=22461 u=root |  TASK [Gathering Facts] *************************************************************************************************************************************************
+2019-10-21 13:25:49,988 p=22461 u=root |  ok: [13.58.107.152]
+2019-10-21 13:25:50,005 p=22461 u=root |  TASK [create directory] ************************************************************************************************************************************************
+2019-10-21 13:25:50,430 p=22461 u=root |  ok: [13.58.107.152]
+2019-10-21 13:25:50,449 p=22461 u=root |  TASK [copy key file] ***************************************************************************************************************************************************
+2019-10-21 13:25:51,069 p=22461 u=root |  ok: [13.58.107.152]
+2019-10-21 13:25:51,088 p=22461 u=root |  TASK [pull the latest code from git] ***********************************************************************************************************************************
+2019-10-21 13:25:51,646 p=22461 u=root |  fatal: [13.58.107.152]: FAILED! => {"changed": false, "cmd": "/usr/bin/git clone --origin origin '' /root/run-container", "msg": "Cloning into '/root/run-container'...\nHost key verification failed.\r\nfatal: Could not read from remote repository.\n\nPlease make sure you have the correct access rights\nand the repository exists.", "rc": 128, "stderr": "Cloning into '/root/run-container'...\nHost key verification failed.\r\nfatal: Could not read from remote repository.\n\nPlease make sure you have the correct access rights\nand the repository exists.\n", "stderr_lines": ["Cloning into '/root/run-container'...", "Host key verification failed.", "fatal: Could not read from remote repository.", "", "Please make sure you have the correct access rights", "and the repository exists."], "stdout": "", "stdout_lines": []}
+2019-10-21 13:25:51,649 p=22461 u=root |  PLAY RECAP *************************************************************************************************************************************************************
+2019-10-21 13:25:51,650 p=22461 u=root |  13.58.107.152              : ok=3    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2019-10-21 13:29:04,533 p=22526 u=root |  PLAY [create_image_and_run_container.yml] ******************************************************************************************************************************
+2019-10-21 13:29:04,542 p=22526 u=root |  TASK [Gathering Facts] *************************************************************************************************************************************************
+2019-10-21 13:29:06,309 p=22526 u=root |  ok: [13.58.107.152]
+2019-10-21 13:29:06,326 p=22526 u=root |  TASK [create directory] ************************************************************************************************************************************************
+2019-10-21 13:29:06,753 p=22526 u=root |  ok: [13.58.107.152]
+2019-10-21 13:29:06,773 p=22526 u=root |  TASK [copy key file] ***************************************************************************************************************************************************
+2019-10-21 13:29:07,402 p=22526 u=root |  ok: [13.58.107.152]
+2019-10-21 13:29:07,420 p=22526 u=root |  TASK [pull the latest code from git] ***********************************************************************************************************************************
+2019-10-21 13:29:07,972 p=22526 u=root |  fatal: [13.58.107.152]: FAILED! => {"changed": false, "cmd": "/usr/bin/git clone --origin origin '' /root/run-container", "msg": "Cloning into '/root/run-container'...\nHost key verification failed.\r\nfatal: Could not read from remote repository.\n\nPlease make sure you have the correct access rights\nand the repository exists.", "rc": 128, "stderr": "Cloning into '/root/run-container'...\nHost key verification failed.\r\nfatal: Could not read from remote repository.\n\nPlease make sure you have the correct access rights\nand the repository exists.\n", "stderr_lines": ["Cloning into '/root/run-container'...", "Host key verification failed.", "fatal: Could not read from remote repository.", "", "Please make sure you have the correct access rights", "and the repository exists."], "stdout": "", "stdout_lines": []}
+2019-10-21 13:29:07,976 p=22526 u=root |  PLAY RECAP *************************************************************************************************************************************************************
+2019-10-21 13:29:07,977 p=22526 u=root |  13.58.107.152              : ok=3    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2019-10-21 13:35:28,258 p=22593 u=root |  PLAY [create_image_and_run_container.yml] ******************************************************************************************************************************
+2019-10-21 13:35:28,267 p=22593 u=root |  TASK [Gathering Facts] *************************************************************************************************************************************************
+2019-10-21 13:35:30,012 p=22593 u=root |  ok: [13.58.107.152]
+2019-10-21 13:35:30,029 p=22593 u=root |  TASK [create directory] ************************************************************************************************************************************************
+2019-10-21 13:35:30,454 p=22593 u=root |  ok: [13.58.107.152]
+2019-10-21 13:35:30,474 p=22593 u=root |  TASK [copy private key file] *******************************************************************************************************************************************
+2019-10-21 13:35:31,102 p=22593 u=root |  ok: [13.58.107.152]
+2019-10-21 13:35:31,121 p=22593 u=root |  TASK [copy public key file] ********************************************************************************************************************************************
+2019-10-21 13:35:31,770 p=22593 u=root |  changed: [13.58.107.152]
+2019-10-21 13:35:31,789 p=22593 u=root |  TASK [pull the latest code from git] ***********************************************************************************************************************************
+2019-10-21 13:35:32,341 p=22593 u=root |  fatal: [13.58.107.152]: FAILED! => {"changed": false, "cmd": "/usr/bin/git clone --origin origin '' /root/run-container", "msg": "Cloning into '/root/run-container'...\nHost key verification failed.\r\nfatal: Could not read from remote repository.\n\nPlease make sure you have the correct access rights\nand the repository exists.", "rc": 128, "stderr": "Cloning into '/root/run-container'...\nHost key verification failed.\r\nfatal: Could not read from remote repository.\n\nPlease make sure you have the correct access rights\nand the repository exists.\n", "stderr_lines": ["Cloning into '/root/run-container'...", "Host key verification failed.", "fatal: Could not read from remote repository.", "", "Please make sure you have the correct access rights", "and the repository exists."], "stdout": "", "stdout_lines": []}
+2019-10-21 13:35:32,344 p=22593 u=root |  PLAY RECAP *************************************************************************************************************************************************************
+2019-10-21 13:35:32,345 p=22593 u=root |  13.58.107.152              : ok=4    changed=1    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2019-10-21 13:36:26,169 p=22664 u=root |  PLAY [create_image_and_run_container.yml] ******************************************************************************************************************************
+2019-10-21 13:36:26,177 p=22664 u=root |  TASK [Gathering Facts] *************************************************************************************************************************************************
+2019-10-21 13:36:27,296 p=22664 u=root |  ok: [13.58.107.152]
+2019-10-21 13:36:27,313 p=22664 u=root |  TASK [create directory] ************************************************************************************************************************************************
+2019-10-21 13:36:27,737 p=22664 u=root |  ok: [13.58.107.152]
+2019-10-21 13:36:27,757 p=22664 u=root |  TASK [copy private key file] *******************************************************************************************************************************************
+2019-10-21 13:36:28,375 p=22664 u=root |  ok: [13.58.107.152]
+2019-10-21 13:36:28,394 p=22664 u=root |  TASK [copy public key file] ********************************************************************************************************************************************
+2019-10-21 13:36:28,860 p=22664 u=root |  ok: [13.58.107.152]
+2019-10-21 13:36:28,880 p=22664 u=root |  TASK [pull the latest code from git] ***********************************************************************************************************************************
+2019-10-21 13:36:30,081 p=22664 u=root |  changed: [13.58.107.152]
+2019-10-21 13:36:30,101 p=22664 u=root |  TASK [build docker image] **********************************************************************************************************************************************
+2019-10-21 13:36:30,511 p=22664 u=root |  fatal: [13.58.107.152]: FAILED! => {"changed": true, "cmd": "docker build -t myimage:1.04 .", "delta": "0:00:00.002335", "end": "2019-10-21 13:36:30.493334", "msg": "non-zero return code", "rc": 127, "start": "2019-10-21 13:36:30.490999", "stderr": "/bin/sh: 1: docker: not found", "stderr_lines": ["/bin/sh: 1: docker: not found"], "stdout": "", "stdout_lines": []}
+2019-10-21 13:36:30,514 p=22664 u=root |  PLAY RECAP *************************************************************************************************************************************************************
+2019-10-21 13:36:30,514 p=22664 u=root |  13.58.107.152              : ok=5    changed=1    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2019-10-21 13:39:24,680 p=22748 u=root |  PLAY [create_image_and_run_container.yml] ******************************************************************************************************************************
+2019-10-21 13:39:24,688 p=22748 u=root |  TASK [Gathering Facts] *************************************************************************************************************************************************
+2019-10-21 13:39:26,452 p=22748 u=root |  ok: [13.58.107.152]
+2019-10-21 13:39:26,471 p=22748 u=root |  TASK [create directory] ************************************************************************************************************************************************
+2019-10-21 13:39:26,898 p=22748 u=root |  changed: [13.58.107.152]
+2019-10-21 13:39:26,918 p=22748 u=root |  TASK [copy private key file] *******************************************************************************************************************************************
+2019-10-21 13:39:27,688 p=22748 u=root |  changed: [13.58.107.152]
+2019-10-21 13:39:27,707 p=22748 u=root |  TASK [pull the latest code from git] ***********************************************************************************************************************************
+2019-10-21 13:39:28,838 p=22748 u=root |  changed: [13.58.107.152]
+2019-10-21 13:39:28,857 p=22748 u=root |  TASK [insall docker] ***************************************************************************************************************************************************
+2019-10-21 13:39:30,129 p=22748 u=root |  [WARNING]: Could not find aptitude. Using apt-get instead
+
+2019-10-21 13:39:30,130 p=22748 u=root |  fatal: [13.58.107.152]: FAILED! => {"ansible_facts": {"pkg_mgr": "apt"}, "changed": false, "msg": "No package(s) matching 'docker*' available"}
+2019-10-21 13:39:30,133 p=22748 u=root |  PLAY RECAP *************************************************************************************************************************************************************
+2019-10-21 13:39:30,133 p=22748 u=root |  13.58.107.152              : ok=4    changed=3    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2019-10-21 13:39:51,191 p=22818 u=root |  PLAY [create_image_and_run_container.yml] ******************************************************************************************************************************
+2019-10-21 13:39:51,200 p=22818 u=root |  TASK [Gathering Facts] *************************************************************************************************************************************************
+2019-10-21 13:39:52,314 p=22818 u=root |  ok: [13.58.107.152]
+2019-10-21 13:39:52,331 p=22818 u=root |  TASK [create directory] ************************************************************************************************************************************************
+2019-10-21 13:39:52,757 p=22818 u=root |  ok: [13.58.107.152]
+2019-10-21 13:39:52,776 p=22818 u=root |  TASK [copy private key file] *******************************************************************************************************************************************
+2019-10-21 13:39:53,402 p=22818 u=root |  ok: [13.58.107.152]
+2019-10-21 13:39:53,421 p=22818 u=root |  TASK [pull the latest code from git] ***********************************************************************************************************************************
+2019-10-21 13:39:54,543 p=22818 u=root |  ok: [13.58.107.152]
+2019-10-21 13:39:54,561 p=22818 u=root |  TASK [insall docker] ***************************************************************************************************************************************************
+2019-10-21 13:39:55,377 p=22818 u=root |  [WARNING]: Could not find aptitude. Using apt-get instead
+
+2019-10-21 13:39:55,378 p=22818 u=root |  fatal: [13.58.107.152]: FAILED! => {"changed": false, "msg": "No package(s) matching 'docker*' available"}
+2019-10-21 13:39:55,381 p=22818 u=root |  PLAY RECAP *************************************************************************************************************************************************************
+2019-10-21 13:39:55,381 p=22818 u=root |  13.58.107.152              : ok=4    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2019-10-21 13:41:17,384 p=22879 u=root |  PLAY [create_image_and_run_container.yml] ******************************************************************************************************************************
+2019-10-21 13:41:17,392 p=22879 u=root |  TASK [Gathering Facts] *************************************************************************************************************************************************
+2019-10-21 13:41:19,152 p=22879 u=root |  ok: [13.58.107.152]
+2019-10-21 13:41:19,169 p=22879 u=root |  TASK [update cache] ****************************************************************************************************************************************************
+2019-10-21 13:41:26,313 p=22879 u=root |  [WARNING]: Could not find aptitude. Using apt-get instead
+
+2019-10-21 13:41:26,313 p=22879 u=root |  changed: [13.58.107.152]
+2019-10-21 13:41:26,332 p=22879 u=root |  TASK [create directory] ************************************************************************************************************************************************
+2019-10-21 13:41:26,757 p=22879 u=root |  ok: [13.58.107.152]
+2019-10-21 13:41:26,778 p=22879 u=root |  TASK [copy private key file] *******************************************************************************************************************************************
+2019-10-21 13:41:27,409 p=22879 u=root |  ok: [13.58.107.152]
+2019-10-21 13:41:27,429 p=22879 u=root |  TASK [pull the latest code from git] ***********************************************************************************************************************************
+2019-10-21 13:41:28,537 p=22879 u=root |  ok: [13.58.107.152]
+2019-10-21 13:41:28,557 p=22879 u=root |  TASK [insall docker] ***************************************************************************************************************************************************
+2019-10-21 13:42:35,763 p=22879 u=root |  changed: [13.58.107.152]
+2019-10-21 13:42:35,782 p=22879 u=root |  TASK [build docker image] **********************************************************************************************************************************************
+2019-10-21 13:43:39,511 p=22879 u=root |  changed: [13.58.107.152]
+2019-10-21 13:43:39,530 p=22879 u=root |  TASK [run container] ***************************************************************************************************************************************************
+2019-10-21 13:43:40,601 p=22879 u=root |  changed: [13.58.107.152]
+2019-10-21 13:43:40,620 p=22879 u=root |  TASK [list the running conatiners] *************************************************************************************************************************************
+2019-10-21 13:43:40,923 p=22879 u=root |  changed: [13.58.107.152]
+2019-10-21 13:43:40,926 p=22879 u=root |  PLAY RECAP *************************************************************************************************************************************************************
+2019-10-21 13:43:40,926 p=22879 u=root |  13.58.107.152              : ok=9    changed=5    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2019-10-21 13:45:48,747 p=22989 u=root |  PLAY [create_image_and_run_container.yml] ******************************************************************************************************************************
+2019-10-21 13:45:48,756 p=22989 u=root |  TASK [Gathering Facts] *************************************************************************************************************************************************
+2019-10-21 13:45:51,207 p=22989 u=root |  ok: [13.58.107.152]
+2019-10-21 13:45:51,228 p=22989 u=root |  TASK [update cache] ****************************************************************************************************************************************************
+2019-10-21 13:45:58,463 p=22989 u=root |  [WARNING]: Updating cache and auto-installing missing dependency: python-apt
+
+2019-10-21 13:45:58,463 p=22989 u=root |  changed: [13.58.107.152]
+2019-10-21 13:45:58,485 p=22989 u=root |  TASK [create directory] ************************************************************************************************************************************************
+2019-10-21 13:45:58,838 p=22989 u=root |  ok: [13.58.107.152]
+2019-10-21 13:45:58,862 p=22989 u=root |  TASK [copy private key file] *******************************************************************************************************************************************
+2019-10-21 13:45:59,370 p=22989 u=root |  ok: [13.58.107.152]
+2019-10-21 13:45:59,392 p=22989 u=root |  TASK [pull the latest code from git] ***********************************************************************************************************************************
+2019-10-21 13:46:00,516 p=22989 u=root |  ok: [13.58.107.152]
+2019-10-21 13:46:00,539 p=22989 u=root |  TASK [insall docker] ***************************************************************************************************************************************************
+2019-10-21 13:46:02,273 p=22989 u=root |  ok: [13.58.107.152]
+2019-10-21 13:46:02,296 p=22989 u=root |  TASK [build docker image] **********************************************************************************************************************************************
+2019-10-21 13:46:17,462 p=23060 u=root |  PLAY [create_image_and_run_container.yml] ******************************************************************************************************************************
+2019-10-21 13:46:17,471 p=23060 u=root |  TASK [Gathering Facts] *************************************************************************************************************************************************
+2019-10-21 13:46:18,471 p=23060 u=root |  ok: [13.58.107.152]
+2019-10-21 13:46:18,491 p=23060 u=root |  TASK [update cache] ****************************************************************************************************************************************************
+2019-10-21 13:46:19,997 p=23060 u=root |  changed: [13.58.107.152]
+2019-10-21 13:46:20,019 p=23060 u=root |  TASK [create directory] ************************************************************************************************************************************************
+2019-10-21 13:46:20,369 p=23060 u=root |  ok: [13.58.107.152]
+2019-10-21 13:46:20,392 p=23060 u=root |  TASK [copy private key file] *******************************************************************************************************************************************
+2019-10-21 13:46:20,863 p=23060 u=root |  ok: [13.58.107.152]
+2019-10-21 13:46:20,885 p=23060 u=root |  TASK [pull the latest code from git] ***********************************************************************************************************************************
+2019-10-21 13:46:21,933 p=23060 u=root |  ok: [13.58.107.152]
+2019-10-21 13:46:21,955 p=23060 u=root |  TASK [insall docker] ***************************************************************************************************************************************************
+2019-10-21 13:46:23,572 p=23060 u=root |  ok: [13.58.107.152]
+2019-10-21 13:46:23,595 p=23060 u=root |  TASK [build docker image] **********************************************************************************************************************************************
+2019-10-21 13:46:24,529 p=23060 u=root |  changed: [13.58.107.152]
+2019-10-21 13:46:24,552 p=23060 u=root |  TASK [run container] ***************************************************************************************************************************************************
+2019-10-21 13:46:24,782 p=23060 u=root |  fatal: [13.58.107.152]: FAILED! => {"changed": true, "cmd": "docker run -d --name=container-1 -p 8081:80 myimage:1.04", "delta": "0:00:00.046877", "end": "2019-10-21 13:46:24.765932", "msg": "non-zero return code", "rc": 125, "start": "2019-10-21 13:46:24.719055", "stderr": "docker: Error response from daemon: Conflict. The container name \"/container-1\" is already in use by container \"e16b483d2671680d73f059bf0acfb58630672d3709b7ece861b4c01634e82928\". You have to remove (or rename) that container to be able to reuse that name.\nSee 'docker run --help'.", "stderr_lines": ["docker: Error response from daemon: Conflict. The container name \"/container-1\" is already in use by container \"e16b483d2671680d73f059bf0acfb58630672d3709b7ece861b4c01634e82928\". You have to remove (or rename) that container to be able to reuse that name.", "See 'docker run --help'."], "stdout": "", "stdout_lines": []}
+2019-10-21 13:46:24,785 p=23060 u=root |  PLAY RECAP *************************************************************************************************************************************************************
+2019-10-21 13:46:24,785 p=23060 u=root |  13.58.107.152              : ok=7    changed=2    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2019-10-21 13:46:30,181 p=23146 u=root |  PLAY [create_image_and_run_container.yml] ******************************************************************************************************************************
+2019-10-21 13:46:30,189 p=23146 u=root |  TASK [Gathering Facts] *************************************************************************************************************************************************
+2019-10-21 13:46:31,171 p=23146 u=root |  ok: [13.58.107.152]
+2019-10-21 13:46:31,191 p=23146 u=root |  TASK [update cache] ****************************************************************************************************************************************************
+2019-10-21 13:46:32,707 p=23146 u=root |  changed: [13.58.107.152]
+2019-10-21 13:46:32,729 p=23146 u=root |  TASK [create directory] ************************************************************************************************************************************************
+2019-10-21 13:46:33,075 p=23146 u=root |  ok: [13.58.107.152]
+2019-10-21 13:46:33,098 p=23146 u=root |  TASK [copy private key file] *******************************************************************************************************************************************
+2019-10-21 13:46:33,572 p=23146 u=root |  ok: [13.58.107.152]
+2019-10-21 13:46:33,594 p=23146 u=root |  TASK [pull the latest code from git] ***********************************************************************************************************************************
+2019-10-21 13:46:34,649 p=23146 u=root |  ok: [13.58.107.152]
+2019-10-21 13:46:34,672 p=23146 u=root |  TASK [insall docker] ***************************************************************************************************************************************************
+2019-10-21 13:46:36,283 p=23146 u=root |  ok: [13.58.107.152]
+2019-10-21 13:46:36,305 p=23146 u=root |  TASK [build docker image] **********************************************************************************************************************************************
+2019-10-21 13:46:36,799 p=23146 u=root |  changed: [13.58.107.152]
+2019-10-21 13:46:36,821 p=23146 u=root |  TASK [run container] ***************************************************************************************************************************************************
+2019-10-21 13:46:37,047 p=23146 u=root |  fatal: [13.58.107.152]: FAILED! => {"changed": true, "cmd": "docker run -d --name=container-1 -p 8081:80 myimage:1.04", "delta": "0:00:00.045011", "end": "2019-10-21 13:46:37.030718", "msg": "non-zero return code", "rc": 125, "start": "2019-10-21 13:46:36.985707", "stderr": "docker: Error response from daemon: Conflict. The container name \"/container-1\" is already in use by container \"e16b483d2671680d73f059bf0acfb58630672d3709b7ece861b4c01634e82928\". You have to remove (or rename) that container to be able to reuse that name.\nSee 'docker run --help'.", "stderr_lines": ["docker: Error response from daemon: Conflict. The container name \"/container-1\" is already in use by container \"e16b483d2671680d73f059bf0acfb58630672d3709b7ece861b4c01634e82928\". You have to remove (or rename) that container to be able to reuse that name.", "See 'docker run --help'."], "stdout": "", "stdout_lines": []}
+2019-10-21 13:46:37,049 p=23146 u=root |  PLAY RECAP *************************************************************************************************************************************************************
+2019-10-21 13:46:37,049 p=23146 u=root |  13.58.107.152              : ok=7    changed=2    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
